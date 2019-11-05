@@ -46,7 +46,7 @@ function parse_sms($sms){
     }
     
     // 2. выдергиваем сумму
-    $pattern = '#([0-9\., ]+(руб.|р.|Р.|РУБ.|Руб.){1})#i';
+    $pattern = '#([0-9\., ]+(руб.|р.|Р.|РУБ.|Руб.|RUB|RUR){1})#i';
     $match = array();
     if (preg_match($pattern, $sms, $match)) {
         $summa = trim($match[0]);
